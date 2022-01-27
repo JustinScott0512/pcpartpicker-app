@@ -1,11 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { BottomNavBarComponent } from './navigation/bottomnavbar.component';
+import { TopNavBarComponent } from './navigation/topnavbar.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        TopNavBarComponent,
+        BottomNavBarComponent
       ],
     }).compileComponents();
   });

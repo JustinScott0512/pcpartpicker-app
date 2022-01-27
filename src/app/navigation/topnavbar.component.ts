@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'pcpp-navbar',
+    selector: 'top-navbar',
     templateUrl: 'topnavbar.component.html',
     styleUrls: ['topnavbar.component.css']
 })
