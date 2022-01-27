@@ -2,18 +2,18 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <a href="#"><svg viewBox="0 0 50 29">
-          <g data-name="Layer 2"><path d="M23.85 7.87a6.39 6.39 0 0 1-1.79 3.31 6.54 6.54 0 0 1-6.93 1.5L4.58 23.22a2.57 2.57 0 0 1-1.89.78 2.64 2.64 0 0 1-1.91-.78 2.68 2.68 0 0 1-.78-1.9 2.71 2.71 0 0 1 .78-1.9L11.32 8.87a6.54 6.54 0 0 1 1.5-6.93A6.39 6.39 0 0 1 16.13.15a6.12 6.12 0 0 1 3.63.29l-4.1 4.1.4 3.4 3.4.4 4.1-4.1a6.12 6.12 0 0 1 .29 3.63z" data-name="Layer 1"></path></g></svg>System Builder</a>
-          <a href="#"><svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 35">
-            <g data-name="Layer 2">
-              <path d="M12 0H0v24h18V6zm4 22H2v-2h3v-1H2v-2h5v-1H2v-2h3v-1H2v-2h5v-1H2V8h3V7H2V5h5V4H2V2h9v5h5z" data-name="Layer 1">
-              </path>
-            </g>
-          </svg>Build Guides</a>
-        <a href="#"><svg viewBox="0 0 50 25">
-          <g data-name="Layer 2">
-            <g data-name="Layer 1"><path d="M19.08 1l-12-1H7a.62.62 0 0 0-.19 0h-.14l-.09.1-.13.07-.13.09L.45 4.17A1 1 0 0 0 0 5v17a1 1 0 0 0 .84 1l6 1H19a1 1 0 0 0 1-1V2a1 1 0 0 0-.92-1zM6 21.82l-4-.67V5.54l4-2.67zM18 22H8V2.09l10 .83z"></path><circle cx="13" cy="18" r="1"></circle><path d="M17 4.6L9 4v2l8 .6v-2zM17 7.6L9 7v2l8 .6v-2z"></path></g></g></svg>Completed Builds</a>
-          <a href="#" class=""><svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M8 8h8v8H8z"></path><path d="M24 9V7h-2V4a2 2 0 0 0-2-2h-3V0h-2v2h-2V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v3H0v2h2v2H0v2h2v2H0v2h2v3a2 2 0 0 0 2 2h3v2h2v-2h2v2h2v-2h2v2h2v-2h3a2 2 0 0 0 2-2v-3h2v-2h-2v-2h2v-2h-2V9zm-4 11H4V4h16z"></path></g></g></svg>Browse Products<span class="down-caret"><svg class="icon shape-dropdown-arrow"><use xlink:href="#shape-dropdown-arrow"></use></svg></span></a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" id="bottom-left">System Builder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" id="bottom-left">Build Guides</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" id="bottom-left">Completed Builds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" id="bottom-left">Browse Products</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item">
@@ -26,7 +26,10 @@
           <a class="nav-link active me-right" aria-current="page" href="#" id="small-bottom">Price Trends</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <button (click)="showingSearchBar = !showingSearchBar" id="search-button">      
+        <img src="../../assets/search-icon.png" id="search-icon">
+      </button>
+      <form class="d-flex" *ngIf="showingSearchBar">
         <input class="form-control me-auto" type="search" placeholder="Search..." aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
