@@ -2,6 +2,9 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { BottomNavBarComponent } from './navigation/bottomnavbar.component';
 import { TopNavBarComponent } from './navigation/topnavbar.component';
+import { BuildGuidesFrontCardComponent } from './navigation/buildguidesfrontcard.component';
+import { ButtonComponent } from './navigation/button.component';
+import { CompletedBuildsFrontCardComponent } from './navigation/completedbuildsfrontcard.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +12,10 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         TopNavBarComponent,
-        BottomNavBarComponent
+        BottomNavBarComponent,
+        BuildGuidesFrontCardComponent,
+        CompletedBuildsFrontCardComponent,
+        ButtonComponent
       ],
     }).compileComponents();
   });

@@ -1,0 +1,56 @@
+#build-guides-paragraph{
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.build-guides-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: radial-gradient(circle at bottom center, #6E6F73 200px, #3C3E42);
+    height: 610px;
+}
+
+.build-guides{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 400px;
+}
+
+h1{
+    color: white;
+    font-size: 60px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.card shadow-sm{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+p{
+    color: #FFFFFF99;
+}
+
+#pcpp-button-img{
+    fill: white;
+    height: 20px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+pcpp-button{
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 250px;
+}

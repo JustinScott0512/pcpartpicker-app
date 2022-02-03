@@ -1,28 +1,48 @@
 #small-bottom{
+    text-align: right;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size:x-small;
+    font-size:small;
+    color: white;
 }
 
 #small-bottom:hover{
     color:orange;
 }
-
+ 
 #search-pic{
     size: 100px;
 }
 
-#bottom-left{
+.bottom-left{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}   
+    border-color: #26293c;
+    border-left-style: solid;
+    border-left-width: 1px;
+    height: 100%;
+    font-size: 16px !important;
+    font-weight: 550 !important;
+    padding-right: 50%;
+}
 
-#bottom-left:hover{
-    color:orange;
+.bottom-left:hover{
+    color:orange !important;
 }  
+
 #search-icon{
     width:48px;
     height:32px;
 }
+
 #search-button{
     background: transparent;
     border: none;
+}
+
+#navbar-bg{
+    background-color: #191b2b;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-color: #26293c;
+    border-top-style: solid;
+    border-top-width: 1px;
 }
