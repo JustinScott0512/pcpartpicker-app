@@ -10,39 +10,24 @@
                 <p id="build-guides-paragraph">Building your own PC and need ideas on where to get started? Explore our build guides which cover systems for a variety of use-cases and budgets.</p>
                 <pcpp-button
                     text="View the Build Guides"
+                    backgroundColor="dodgerblue"
+                    textColor="white"
                 >
                 <svg id="pcpp-button-img" class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 24"><g data-name="Layer 2"><path d="M12 0H0v24h18V6zm4 22H2v-2h3v-1H2v-2h5v-1H2v-2h3v-1H2v-2h5v-1H2V8h3V7H2V5h5V4H2V2h9v5h5z" data-name="Layer 1"></path></g></svg>
                 </pcpp-button>
             </div>
         <buildguides-frontcard
-            name="Entry Level Intel Gaming Build"
-            cpu="Intel Core i3-10100"
-            gpu="GeForce GTX 1650 SUPER"
-            case="Cooler Master MasterBox Q300L MicroATX Mini Tower"
-            cost="$1041.91"
-            comments="162"
-            picture=""
+            *ngFor="let card of cards"
+            name="{{card.name}}"
+            cpu="{{card.cpu}}"
+            gpu="{{card.gpu}}"
+            case="{{card.case}}"
+            cost="{{card.cost}}"
+            comments="{{card.comments}}"
+            picture="{{card.picture}}"
         >
         </buildguides-frontcard>
-        <buildguides-frontcard
-            name="Modest AMD Gaming Build"
-            cpu="AMD Ryzen 5 5600G"
-            gpu="GeForce GTX 1660 SUPER"
-            case="Fractal Design Focus G Mini MicroATX Mini Tower"
-            cost="$1177.73"
-            comments="126"
-            picture=""
-        >
-        </buildguides-frontcard>
-        <buildguides-frontcard
-            name="Magnificent AMD Gaming/Streaming Build"
-            cpu="AMD Ryzen 5 5600X"
-            gpu="GeForce RTX 3080"
-            case="be quiet! Pure Base 500DX ATX Mid Tower"
-            cost="$3005.73+"
-            comments="169"
-            picture=""
-        ></buildguides-frontcard>
+        
     </div>
 </header>
 

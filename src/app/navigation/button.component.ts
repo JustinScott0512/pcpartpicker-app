@@ -8,6 +8,8 @@ import { Component, Input } from "@angular/core";
 export class ButtonComponent{
     showingSearchBar: Boolean = false
     @Input() text: String = "";
+    @Input() textColor: String = "";
+    @Input() backgroundColor: String = "";
 
     constructor(){
 
