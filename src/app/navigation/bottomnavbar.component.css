@@ -46,3 +46,7 @@
     border-top-style: solid;
     border-top-width: 1px;
 }
+
+.nav-item{
+    cursor: pointer;
+}
