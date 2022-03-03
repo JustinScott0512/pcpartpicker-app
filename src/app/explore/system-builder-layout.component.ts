@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { SystemBuilderCategory } from "./system-builder-category";
 
 @Component({
     selector: 'system-builder-layout',
@@ -7,5 +8,8 @@ import { Component } from "@angular/core";
 })
 
 export class SystemBuilderLayoutComponent{
-
+    products: SystemBuilderCategory[] = [
+        new SystemBuilderCategory("CPU", "dodgerblue"),
+        new SystemBuilderCategory("GPU", "dodgerblue"),
+      ];
 }

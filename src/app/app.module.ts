@@ -13,6 +13,8 @@ import { SystemBuilderLayoutComponent } from './explore/system-builder-layout.co
 import { BuildGuidesLayoutComponent } from './explore/build-guides-layout.component';
 import { CompletedBuildsLayoutComponent } from './explore/completed-builds-layout.component';
 import { RegisterLayoutComponent } from './explore/register-layout.component';
+import { SystemBuilderButtonComponent } from './explore/system-builder-button.component';
+import { SystemBuilderCategoryComponent } from './explore/system-builder-category.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RegisterLayoutComponent } from './explore/register-layout.component';
     SystemBuilderLayoutComponent,
     BuildGuidesLayoutComponent,
     CompletedBuildsLayoutComponent,
-    RegisterLayoutComponent
+    RegisterLayoutComponent,
+    SystemBuilderButtonComponent,
+    SystemBuilderCategoryComponent,
   ],
   imports: [
     BrowserModule,

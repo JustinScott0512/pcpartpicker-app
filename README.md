@@ -1,31 +1,27 @@
 # PcpartpickerApp
 
-Replicating PCPartPicker for CS 230 Project
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
 
-# Most Recent Update:
+## Development server
 
-## Main changes:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Added basic routing using Angular
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-#### This includes:
+## Build
 
-Routing for the logo on the top left of the website that routes to home
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Routing for the register button on the topnavbar to the register page
+## Running unit tests
 
-Routing for the buttons on the bottomnavbar system builder, build guides, and completed builds, that routes to their own respective pages
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
-## Other Changes:
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-Made app.component.html contain the two navbars and make that basically permanent for all pages
+## Further help
 
-Created new pages for register function and system builder (functionality needs to be implemented)
-
-Added layout files for each routing destination page (html, ts, and css for each)
-
-Added app module routing ts file for routing throughout the website
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
