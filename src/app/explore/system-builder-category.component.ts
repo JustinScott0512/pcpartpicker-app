@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { SystemBuilderCategory } from "./system-builder-category";
 
 @Component({
     selector: 'category',
@@ -9,6 +10,12 @@ export class SystemBuilderCategoryComponent{
     showingSearchBar: Boolean = false
     @Input() name: String = "";
     @Input() textColor: String = "";
+    @Input() base: String = "";
+    @Input() promo: String = "";
+    @Input() shipping: String = "";
+    @Input() tax: String = "";
+    @Input() price: String = "";
+    @Input() where: String = "";
 
     constructor(){
 

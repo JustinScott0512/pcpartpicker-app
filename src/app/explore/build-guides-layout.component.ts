@@ -1,5 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Buildguidesfrontcard } from "./buildguidesfrontcard";
+import { build_guides_list } from "./build_guides_list";
+import { BuildGuidesService } from "./buildguides.service";
+
 
 @Component({
     selector: 'build-guides-layout',
@@ -7,10 +10,53 @@ import { Buildguidesfrontcard } from "./buildguidesfrontcard";
     styleUrls: ['build-guides-layout.component.css']
 })
 
-export class BuildGuidesLayoutComponent{
-    cards: Buildguidesfrontcard[] = [
+export class BuildGuidesLayoutComponent implements OnInit{
+    
+    // rows: BuildGuideModel[] = [];
+    
+    firstRow: Buildguidesfrontcard[] = [
         new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
-        new Buildguidesfrontcard("Modest AMD Gaming Build", "AMD Ryzen 5 5600G", "GeForce GTX 1660 SUPER", "Fractal Design Focus G Mini MicroATX Mini Tower", 1177.73, 126, ""),
-        new Buildguidesfrontcard("Magnificent AMD Gaming/Streaming Build", "AMD Ryzen 5 5600X", "GeForce RTX 3080", "be quiet! Pure Base 500DX ATX Mid Tower", 3005.73, 169, "")
-      ];
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+    ];
+    secondRow: Buildguidesfrontcard[] = [
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),    ];
+    thirdRow: Buildguidesfrontcard[] = [
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),    ];
+    fourthRow: Buildguidesfrontcard[] = [
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),    ];
+    fifthRow: Buildguidesfrontcard[] = [
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),    ];
+    lastCard: Buildguidesfrontcard[] = [
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),
+        new Buildguidesfrontcard("Entry Level Intel Gaming Build", "Intel Core i3-10100", "GeForce GTX 1650 SUPER", "Cooler Master MasterBox Q300L MicroATX Mini Tower", 1041.91, 162, ""),    ];
+
+    constructor(private buildGuidesService: BuildGuidesService){
+        // for(var buildguide of build_guides_list){
+        //     this.rows.push(buildguide);
+        // }
+    }
+
+    ngOnInit(): void {
+        // this.buildGuidesService.getBuildGuides().subscribe((data: BuildGuideModel[])=>{
+        //     console.log("fetching build guides")
+        //     console.log(data)
+        // }
+        // );
+    }
 }

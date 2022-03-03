@@ -1,23 +1,32 @@
+<div id="systemBuilder">
+    <h1>System Builder</h1>
+</div>
+
 <div class="system-builder-container">
-    <div class="table-header-container">
-        <th>Component</th>
-        <th>Selection</th>
-        <th>Base</th>
-        <th>Promo</th>
-        <th>Shipping</th>
-        <th>Tax</th>
-        <th>Price</th>
-        <th>Where</th>
-    </div>
-    
-    <div class="category-container">
-        <div class="row">
-            <category textColor="dodgerBlue" name="CPU"></category>
-            <add-button id="add-button" text="CPU" backgroundColor="dodgerblue" textColor="white"></add-button>
-        </div>
-        <div class="row">
-            <category textColor="dodgerBlue" name="CPU Cooler"></category>
-            <add-button id="add-button" text="GPU" backgroundColor="dodgerblue" textColor="white"></add-button>
-        </div>
-    </div>
+    <system-builder-actionbox></system-builder-actionbox>
+    <table class="">
+        <thead>
+            <th>Component</th>
+            <th>Selection</th>
+            <th>Base</th>
+            <th>Promo</th>
+            <th>Shipping</th>
+            <th>Tax</th>
+            <th>Price</th>
+            <th>Where</th>
+        </thead>
+        <tr>
+            <td>
+                <category
+                    *ngFor="let product of products"
+                    name="{{product.name}}"
+                    textColor="{{product.textColor}}"
+                ></category>
+            </td>
+            <td>
+                <add-button id="add-button" *ngFor="let product of products"
+                text="{{product.name}}" backgroundColor="#2C85C5" textColor="white">
+                </add-button></td>
+        </tr>
+    </table>
 </div>
