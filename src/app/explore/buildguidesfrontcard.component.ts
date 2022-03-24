@@ -14,8 +14,4 @@ export class BuildGuidesFrontCardComponent{
     @Input() comments: String = "";
     @Input() picture: String = "";
 
-    constructor(){
-
-    }
-
 }

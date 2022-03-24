@@ -9,15 +9,15 @@ import { SystemBuilderCategory } from "./system-builder-category";
 
 export class SystemBuilderLayoutComponent{
     products: SystemBuilderCategory[] = [
-        new SystemBuilderCategory("CPU", "var(--blue)"),
-        new SystemBuilderCategory("CPU Cooler", "var(--blue)"),
-        new SystemBuilderCategory("Motherboard", "var(--blue)"),
-        new SystemBuilderCategory("Memory", "var(--blue)"),
-        new SystemBuilderCategory("Storage", "var(--blue)"),
-        new SystemBuilderCategory("Video Card", "var(--blue)"),
-        new SystemBuilderCategory("Case", "var(--blue)"),
-        new SystemBuilderCategory("Power Supply", "var(--blue)"),
-        new SystemBuilderCategory("Operating System", "var(--blue)"),
-        new SystemBuilderCategory("Monitor", "var(--blue)"),
+        new SystemBuilderCategory("CPU"),
+        new SystemBuilderCategory("CPU Cooler"),
+        new SystemBuilderCategory("Motherboard"),
+        new SystemBuilderCategory("Memory"),
+        new SystemBuilderCategory("Storage"),
+        new SystemBuilderCategory("Video Card"),
+        new SystemBuilderCategory("Case"),
+        new SystemBuilderCategory("Power Supply"),
+        new SystemBuilderCategory("Operating System"),
+        new SystemBuilderCategory("Monitor"),
     ];
 }

@@ -5,7 +5,7 @@ import { Buildguidesfrontcard } from "./buildguidesfrontcard";
 @Component({
     selector: 'home-layout',
     templateUrl: 'home-layout.component.html',
-    styleUrls: ['home-layout.component.css']
+    styleUrls: ['home-layout.component.css', '../../../node_modules/bootstrap/dist/css/bootstrap.css']
 })
 
 export class HomeLayoutComponent{

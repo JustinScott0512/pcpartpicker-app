@@ -16,6 +16,11 @@ import { RegisterLayoutComponent } from './explore/register-layout.component';
 import { SystemBuilderButtonComponent } from './explore/system-builder-button.component';
 import { SystemBuilderCategoryComponent } from './explore/system-builder-category.component';
 import { SystemBuilderActionBoxComponent } from './explore/system-builder-actionbox.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { firebaseConfig } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +41,10 @@ import { SystemBuilderActionBoxComponent } from './explore/system-builder-action
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

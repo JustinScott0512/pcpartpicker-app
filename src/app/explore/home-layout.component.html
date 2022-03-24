@@ -7,13 +7,10 @@
                     text="View the Build Guides"
                     backgroundColor="var(--blue)"
                     textColor="white"
+                    routerLink="/build-guides"
                 >
                 <svg id="pcpp-button-img" class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 24"><g data-name="Layer 2"><path d="M12 0H0v24h18V6zm4 22H2v-2h3v-1H2v-2h5v-1H2v-2h3v-1H2v-2h5v-1H2V8h3V7H2V5h5V4H2V2h9v5h5z" data-name="Layer 1"></path></g></svg>
                 </pcpp-button>
-                <nav>
-                    <a routerLink="/button"></a>
-                </nav>
-                <router-outlet></router-outlet>
             </div>
         <buildguides-frontcard
             *ngFor="let card of cards"

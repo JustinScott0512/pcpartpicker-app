@@ -11,7 +11,7 @@
     
         <div class="cards-content">
             <buildguides-frontcard
-                *ngFor="let card of firstRow"
+                *ngFor="let card of rows"
                 name="{{card.name}}"
                 cpu="{{card.cpu}}"
                 gpu="{{card.gpu}}"
@@ -24,7 +24,7 @@
         </div>
         <div class="cards-content">
             <buildguides-frontcard
-                *ngFor="let card of secondRow"
+                *ngFor="let card of rows"
                 name="{{card.name}}"
                 cpu="{{card.cpu}}"
                 gpu="{{card.gpu}}"
@@ -37,7 +37,7 @@
         </div>
         <div class="cards-content">
             <buildguides-frontcard
-                *ngFor="let card of thirdRow"
+                *ngFor="let card of rows"
                 name="{{card.name}}"
                 cpu="{{card.cpu}}"
                 gpu="{{card.gpu}}"
@@ -52,7 +52,7 @@
         </div>
         <div class="cards-content">
             <buildguides-frontcard
-                *ngFor="let card of fourthRow"
+                *ngFor="let card of rows"
                 name="{{card.name}}"
                 cpu="{{card.cpu}}"
                 gpu="{{card.gpu}}"
@@ -64,7 +64,7 @@
         </div>
         <div class="cards-content" id="lastRow">
             <buildguides-frontcard
-                *ngFor="let card of fifthRow"
+                *ngFor="let card of lastRow"
                 name="{{card.name}}"
                 cpu="{{card.cpu}}"
                 gpu="{{card.gpu}}"
@@ -73,8 +73,9 @@
                 comments="{{card.comments}}"
             >
             </buildguides-frontcard>
+
             <buildguides-frontcard
-                *ngFor="let card of fifthRow"
+                *ngFor="let card of lastRow"
                 name="{{card.name}}"
                 cpu="{{card.cpu}}"
                 gpu="{{card.gpu}}"
