@@ -20,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { firebaseConfig } from 'src/environments/environment';
+import { SystemBuilderPricesComponent } from './explore/system-builder-prices/system-builder-prices.component';
+import { PartformComponent } from './explore/partform/partform.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,13 +41,16 @@ import { firebaseConfig } from 'src/environments/environment';
     SystemBuilderButtonComponent,
     SystemBuilderCategoryComponent,
     SystemBuilderActionBoxComponent,
+    SystemBuilderPricesComponent,
+    PartformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

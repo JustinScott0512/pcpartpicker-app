@@ -6,4 +6,5 @@ export class SystemBuilderCategory {
     constructor(name: String){
         this.name = name;
     }
+
 }

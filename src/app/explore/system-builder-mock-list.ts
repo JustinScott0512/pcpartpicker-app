@@ -1,6 +1,7 @@
 export const SystemBuilderMockList = [
     {
-        base: 653.42,
+        part: "CPU",
+        base: 893.42,
         promo: 0,
         shipping: 14.21,
         tax: 18.76,
@@ -8,6 +9,7 @@ export const SystemBuilderMockList = [
         where: "IBuyPowerPC",
     },
     {
+        part: "CPU Cooler",
         base: 863.42,
         promo: 0,
         shipping: 14.21,
@@ -16,6 +18,7 @@ export const SystemBuilderMockList = [
         where: "Cyberpower PC",
     },
     {
+        part: "Motherboard",
         base: 2469.24,
         promo: 67.89,
         shipping: 65.29,

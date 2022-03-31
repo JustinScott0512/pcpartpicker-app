@@ -1,4 +1,5 @@
 export class SystemBuilderModel{
+    part: string;
     base: number;
     promo: number;
     shipping: number;
@@ -6,7 +7,8 @@ export class SystemBuilderModel{
     price: number;
     where: string;
 
-    constructor(base: number, promo: number, shipping: number, tax: number, price: number, where: string){
+    constructor(part: string, base: number, promo: number, shipping: number, tax: number, price: number, where: string){
+        this.part = part;
         this.base = base;
         this.promo = promo;
         this.shipping = shipping;

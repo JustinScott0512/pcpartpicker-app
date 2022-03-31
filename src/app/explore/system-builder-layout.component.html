@@ -2,6 +2,10 @@
     <h1>System Builder</h1>
 </div>
 
+<app-partform>
+    
+</app-partform>
+
 <div class="system-builder-container">
     <system-builder-actionbox></system-builder-actionbox>
     <table class="">
@@ -15,17 +19,49 @@
             <th>Price</th>
             <th>Where</th>
         </thead>
-        <tr>
+        <ng-container *ngFor="let product of products">
+            <tr *ngIf="!partNames.includes(product.name)">
+                <td>
+                    <category
+                        name="{{product.name}}"
+                    ></category>
+                </td>
+                <td>
+                    <add-button id="add-button"
+                    text="{{product.name}}" backgroundColor="#2C85C5" textColor="white" onclick="addItem(product.name)">
+                    </add-button>
+                </td>
+            </tr>
+        </ng-container>
+        <tr *ngFor="let part of systembuilderparts">
             <td>
                 <category
-                    *ngFor="let product of products"
-                    name="{{product.name}}"
+                    name="{{part.part}}"
                 ></category>
             </td>
             <td>
-                <add-button id="add-button" *ngFor="let product of products"
-                text="{{product.name}}" backgroundColor="#2C85C5" textColor="white">
-                </add-button></td>
+                <add-button id="add-button"
+                text="{{part.part}}" backgroundColor="#2C85C5" textColor="white">
+                </add-button>
+            </td>
+            <td>
+                {{part.base}}
+            </td>
+            <td>
+                {{part.promo}}
+            </td>
+            <td>
+                {{part.shipping}}
+            </td>
+            <td>
+                {{part.tax}}
+            </td>
+            <td>
+                {{part.price}}
+            </td>
+            <td>
+                {{part.where}}
+            </td>
         </tr>
     </table>
 </div>
