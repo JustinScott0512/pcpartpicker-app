@@ -1,18 +1,18 @@
-Main changes:
+# Main changes:
 
 Added functionality to register an account
 
 Added functionality to sign into an account
 
 
-This includes:
+### This includes:
 
 Adding functions for sign in in sign in ts file
 
 Adding functions for registering in register ts file
 
 
-Smaller changes:
+# Other changes:
 
 Added form for registration on the registration component
 
