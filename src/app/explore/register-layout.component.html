@@ -1,3 +1,11 @@
-<div>
-    <h1>Register Form Here</h1>
+<div class="signup-container">
+	<h1 class="header">Registration</h1>
+
+	<form [formGroup]="signUpForm" class="signup-form" (ngSubmit)="signUp()">
+		<input type="email" placeholder="Email" formControlName="email">
+		<input type="password" placeholder="Password" formControlName="password">
+		<input type="submit" value="Sign Up">
+	</form>
+
+	<a routerLink="/login">Already have an account? Login here</a>
 </div>

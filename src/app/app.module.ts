@@ -23,7 +23,7 @@ import { firebaseConfig } from 'src/environments/environment';
 import { SystemBuilderPricesComponent } from './explore/system-builder-prices/system-builder-prices.component';
 import { PartformComponent } from './explore/partform/partform.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { LoginComponent } from './explore/login/login.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SystemBuilderCategoryComponent,
     SystemBuilderActionBoxComponent,
     SystemBuilderPricesComponent,
-    PartformComponent
+    PartformComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

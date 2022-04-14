@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BuildGuidesLayoutComponent } from './explore/build-guides-layout.component';
 import { CompletedBuildsLayoutComponent } from './explore/completed-builds-layout.component';
 import { HomeLayoutComponent } from './explore/home-layout.component';
+import { LoginComponent } from './explore/login/login.component';
 import { RegisterLayoutComponent } from './explore/register-layout.component';
 import { SystemBuilderLayoutComponent } from './explore/system-builder-layout.component';
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'system-builder', component: SystemBuilderLayoutComponent },
   { path: 'build-guides', component: BuildGuidesLayoutComponent },
   { path: 'completed-builds', component: CompletedBuildsLayoutComponent },
-  { path: 'register', component: RegisterLayoutComponent }
+  { path: 'register', component: RegisterLayoutComponent },
+  { path: 'login', component: LoginComponent }
 
 ];
 
